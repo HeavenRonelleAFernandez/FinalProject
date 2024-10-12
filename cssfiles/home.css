@@ -1,0 +1,113 @@
+#container2 {
+    padding: 20px;
+    position: relative;
+    z-index: 0;
+    bottom: 70%;
+    overflow: auto;
+}
+
+h1, h2, .secondtext-item {
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+p, li{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+#firsttext p{
+    font-size: larger;
+    padding-left: 20%;
+    width: 60%;
+    color: #6A9C89;
+}
+
+#firsttext img{
+    float: left;
+}
+
+#thirdtext p{
+    font-size: larger;
+    padding-left: 20%;
+    width: 60%;
+    color: #6A9C89;
+}
+
+#thirdtext img{
+    float: left;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10%;
+}
+  
+.secondtext-item {
+    border: 2px solid #16423C;
+    background-color: #eee;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+    color: #6A9C89;
+    font-size: 20px;
+}
+
+.chains1 {
+    position: absolute;
+    margin-top: 0.5%;
+    margin-left: 25.9%;
+    width: 10%;
+    z-index: 0;
+}
+
+.chains2 {
+    position: absolute;
+    margin-top: 0.5%;
+    width: 10%;
+    z-index: 0;
+    left: 63%;
+}
+
+#p1 {
+    font-size: 20px;
+    color: #6A9C89;
+}
+
+#list {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+  
+#other-content {
+    grid-column: 2;
+    padding: 20px;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 2px solid #16423C;
+}
+  
+#other-content img {
+    width: 20%;
+    height: 150px;
+    margin: 30px;
+}
+  
+#other-content h2 {
+    text-align: center;
+    width: 100%;
+}
+  
+.grid-container2 li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    color: #6A9C89;
+}

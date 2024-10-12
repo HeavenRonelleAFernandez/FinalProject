@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    padding-bottom: 200px;
+    background-image: url("../images/background.png");
+    background-size: 400px 600px;
+    background-repeat: repeat;
+}
+
+#imp {
+    border: 5px dotted #00bf8f;
+    border-image-slice: 19; 
+    border-image-source: linear-gradient(10deg, #00bf8f 0%, #001510 100%);
+}
+
+#container {
+    border: 2px solid #16423C;
+    margin: 50px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row; 
+    position: relative; 
+    background-color: #E9EFEC;
+}
+
+#container2 h1 {
+    font-family: "Kanit", sans-serif;
+    color: #16423C;
+}
+
+#section h1 {
+    text-align: center;
+    color: #16423C;
+}
+
+#section1, #section2, #section3 {
+    flex: 1; 
+    padding: 20px;
+    position: relative; 
+    color: #16423C;
+    background-color: #E9EFEC;
+}
+
+#section2 {
+    font-size: 20px;
+    text-align: center; 
+}
+
+#section3 span {
+    position: absolute; 
+    top: 0;
+    right: 0; 
+    padding: 10px; 
+    text-align: center;
+    border: 2px solid #16423C;
+    border-radius: 20% ;
+}
+
+#nav {
+    border: 2px solid #16423C;
+    position: relative; 
+    bottom: 50px;
+    left: 50px;
+    width: 92.1%; 
+    padding: 10px; 
+    text-align: center; 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-around; 
+    z-index: 2;
+    background-color: #16423C;
+}
+
+#nav .nav-item {
+    flex: 1; 
+    text-align: center; 
+}
+
+#search {
+    width: 100%;
+    padding: 10px; 
+    border: none; 
+    border-radius: 10px; 
+    font-size: 16px; 
+}
+
+#search:focus {
+    outline: none; 
+    box-shadow: 0 0 10px #ccc; 
+}
+
+.icon {
+    position: absolute; 
+    left: 18.5%; 
+    top: 50%; 
+    transform: translateY(-50%);
+}
+
+.icon img {
+    width: 20px; 
+    height: 20px; 
+    vertical-align: middle; 
+}
+
+#box .one, .two, .three{
+    flex: auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    bottom: 69px;
+    left: 45%;
+    color: white;
+    width:150px;
+    z-index: 1;
+    padding: 10px;
+    font-size: 25px;
+    size: 5px;
+    text-align: center;
+    margin-top: 10px; 
+    text-decoration: none;
+    border: 2px solid #6A9C89;
+    border-radius: 20%;
+    transition: 0.5s;
+    box-shadow: 0 0 5px 0 #6A9C89;
+    background-color: #16423C;
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+#box .two {
+    bottom: 140px;
+    left: 64%;
+}
+
+#box .three {
+    bottom: 210px;
+    left: 82%;
+}
+
+#box .one:hover, .two:hover, .three:hover {
+    background-color: #6A9C89;
+    box-shadow: 0 0 10px #ccc; 
+    transition: 0.5s;
+    animation: border-animation 2s infinite;
+    font-size: 30px;
+}
+
+@keyframes border-animation {
+    0% {
+        box-shadow: 0 0 5px 0 #6A9C89;
+    }
+    25% {
+        box-shadow: 0 0 5px 5px #6A9C89;
+    }
+    50% {
+        box-shadow: 0 0 5px 10px #6A9C89;
+    }
+    75% {
+        box-shadow: 0 0 5px 5px #6A9C89;
+    }
+    90% {
+        box-shadow: 0 0 5px 5px #6A9C89;
+    }
+    100% {
+        box-shadow: 0 0 10px 5px #6A9C89;
+    }
+}
+
+#box a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#box a:hover {
+    color: #ccc;
+}
+
+#container2 {
+    border: 2px solid #16423C;
+    margin: -19% 50px;
+    padding: 20px;
+    position: relative; 
+    z-index: 0;
+    bottom: 70%;
+    overflow: auto;
+    background-color: #E9EFEC;
+}
+
+#end {
+    position: relative; 
+    left: 50px;
+    bottom: -270px;
+    width: 92%; 
+    background-color: #16423C;
+    padding: 10px;
+    display: flex;
+    z-index: 2;
+    justify-content: space-between;
+    font-family: "Protest Guerrilla", sans-serif;
+    color: white;
+    margin-bottom:90px;
+}
+
+#end2 {
+    left: 90%;
+}
