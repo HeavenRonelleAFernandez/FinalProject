@@ -58,6 +58,22 @@ body {
     border-radius: 20% ;
 }
 
+#section3 a:link {
+    color: #16423C;
+}
+  
+#section3 a:visited {
+    color: red;
+}
+
+#section3  a:hover {
+    color: #00bf8f;
+}
+  
+#section3 a:active {
+    color: #0000FF;
+}
+
 #nav {
     border: 2px solid #16423C;
     position: relative; 
