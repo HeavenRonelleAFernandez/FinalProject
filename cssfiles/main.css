@@ -196,13 +196,13 @@ body {
 }
 
 .facebook {
-    background: url('../logo.avif') no-repeat -49px -89px;
+    background: url('../images.logo.avif') no-repeat -49px -89px;
 	width: 118px;
 	height: 120px;
 }
 
 .twitter {
-    background: url('../logo.avif') no-repeat -187px -90px;
+    background: url('../images/logo.avif') no-repeat -187px -90px;
 	width: 117px;
 	height: 120px;
 }
@@ -220,7 +220,7 @@ body {
 
 
 .mario {
-    background: url('../mario.webp') no-repeat 0 0;
+    background: url('../images/mario.webp') no-repeat 0 0;
     width: 130px;
     height: 210px;
     animation: mario 1s steps(3) infinite; 
