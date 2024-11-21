@@ -195,6 +195,18 @@ body {
     color: #ccc;
 }
 
+.facebook {
+    background: url('../logo.avif') no-repeat -49px -89px;
+	width: 118px;
+	height: 120px;
+}
+
+.twitter {
+    background: url('../logo.avif') no-repeat -187px -90px;
+	width: 117px;
+	height: 120px;
+}
+
 #container2 {
     border: 2px solid #16423C;
     margin: -19% 50px;
@@ -204,6 +216,23 @@ body {
     bottom: 70%;
     overflow: auto;
     background-color: #E9EFEC;
+}
+
+
+.mario {
+    background: url('../mario.webp') no-repeat 0 0;
+    width: 130px;
+    height: 210px;
+    animation: mario 1s steps(3) infinite; 
+}
+
+@keyframes mario {
+    from {
+        background-position-x: 0; 
+    }
+    to {
+        background-position-x: -390px; 
+    }
 }
 
 #end {
