@@ -106,6 +106,10 @@ p, li{
     width: 100%;
 }
   
+#other-content img:nth-child(3){
+    border: 5px dotted red;
+}
+
 .grid-container2 li {
     padding: 10px;
     border-bottom: 1px solid #ccc;
