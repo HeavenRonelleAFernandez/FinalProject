@@ -2,3 +2,66 @@ li {
     color: #6A9C89;
     padding: 10px;
 }
+
+.mario-container {
+    position: relative; 
+    width: 400px; 
+    height: 150px;
+    margin: 20px auto; 
+    overflow: hidden; 
+    background-color: lightblue;
+}
+
+.mario {
+    position: relative;
+    background: url('../images/mario.jpg') no-repeat -30px -48px;
+    width: 47px; 
+    height: 95px; 
+    animation: move-mario 30s infinite, mario-steps 1s steps(4) infinite;
+}
+
+@keyframes move-mario {
+    from {
+        left: -50px; 
+    }
+    to {
+        left: 100%; 
+    }
+}
+
+@keyframes mario-steps {
+    from {
+        background-position-x: -30px;
+    }
+    to {
+        background-position-x: -400px; 
+    }
+}
+
+.link {
+    display: flex;
+    align-items: center; 
+}
+
+.facebook {
+    background: url('../images/logo.jpg') no-repeat -24px -15px;
+    width: 36px;
+    height: 36px;
+    margin: 30px;
+    background-color: #4267B2; 
+    border-radius: 50%; 
+}
+
+.twitter {
+    background: url('../images/logo.jpg') no-repeat -347px -15px;
+    width: 36px;
+    height: 36px;
+    background-color: #1DA1F2;
+    border-radius: 50%; 
+}
+
+ul li:last-child{
+    color: red;
+    font-size:larger;
+    border: 2px dotted black;
+}
