@@ -73,19 +73,21 @@ document.addEventListener("DOMContentLoaded", function() {
         choicesContainer.className = "choices-container";
         quizContainer.appendChild(choicesContainer);
 
-        //creating buttons for each answer choice
-        questionData.choices.forEach((choice, index) => {
+        let index = 0;
+        while (index < questionData.choices.length) {
             let button = document.createElement("button");
-            button.textContent = choice;
+            button.textContent = questionData.choices[index];
             button.className = "choice-button";
+            button.setAttribute("data-index", index);
             button.onclick = function () {
                 if (!submittedAnswers[currentQuestionIndex]) {
-                    selectedAnswers[currentQuestionIndex] = index;
+                    selectedAnswers[currentQuestionIndex] = parseInt(this.getAttribute("data-index"));
                     updateButtonStyles();
                 }
             };
             choicesContainer.appendChild(button);
-        });
+            index++;
+        }
         
         createNavigationButtons();
         updateButtonStyles();
@@ -94,16 +96,20 @@ document.addEventListener("DOMContentLoaded", function() {
     //function to update button styles after selection or submission
     function updateButtonStyles() {
         let buttons = quizContainer.querySelectorAll(".choice-button");
-        buttons.forEach((button, index) => {
+        let index = 0;
+        while (index < buttons.length) {
+            let button = buttons[index];
+            let btnIndex = parseInt(button.getAttribute("data-index"));
             if (submittedAnswers[currentQuestionIndex]) {
-                button.style.backgroundColor = index === quizData[currentQuestionIndex].answer ? "darkgreen" : (index === selectedAnswers[currentQuestionIndex] ? "darkred" : "#444");
+                button.style.backgroundColor = btnIndex === quizData[currentQuestionIndex].answer ? "darkgreen" : (btnIndex === selectedAnswers[currentQuestionIndex] ? "darkred" : "#444");
                 button.style.color = "white";
                 button.classList.add("answered");
             } else {
-                button.style.backgroundColor = selectedAnswers[currentQuestionIndex] === index ? "#666" : "#222";
-                button.style.color = "white";
+                button.style.backgroundColor = selectedAnswers[currentQuestionIndex] === btnIndex ? "white" : "#222";
+                button.style.color = selectedAnswers[currentQuestionIndex] === btnIndex ? "black" : "white";
             }
-        });
+            index++;
+        }
     }
 
     //function to create navigation buttons
@@ -145,7 +151,16 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
                 updateButtonStyles();
             }
-            if (submittedAnswers.every(answer => answer)) {
+            let allSubmitted = true;
+            let i = 0;
+            while (i < submittedAnswers.length) {
+                if (!submittedAnswers[i]) {
+                    allSubmitted = false;
+                    break;
+                }
+                i++;
+            }
+            if (allSubmitted) {
                 showResults();
             }
         };
