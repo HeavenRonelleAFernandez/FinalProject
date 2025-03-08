@@ -115,3 +115,38 @@ p, li{
     border-bottom: 1px solid #ccc;
     color: #6A9C89;
 }
+
+#test {
+    align-items: center;
+    text-align: center;
+}
+
+.choice-button, #start-quiz {
+    background-color: #f0f0f0;
+    border: 2px solid #16423C;
+    padding: 10px;
+    margin: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.choice-button:hover, #start-quiz:hover {
+    background-color: #6A9C89;
+    transform: scale(1.1);
+}
+
+.answered {
+    pointer-events: none;
+}
+
+.nav-button, .submit-button {
+    background-color: #16423C;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover, .submit-button:hover {
+    background-color: #6A9C89;
+}
