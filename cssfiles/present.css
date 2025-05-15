@@ -1,4 +1,4 @@
-#box .one {
+#box .two {
     background-color: #6A9C89;
 }
 
@@ -19,7 +19,7 @@ p {
     position:absolute;
     width: 131.5px;
     top: 250px;
-    left: 686px;
+    left: 975px;
     padding: 20px;
     background-color: #6A9C89;
     z-index: 2;

@@ -40,7 +40,7 @@ img[src$=".png"]:not(#imp), img[src$=".jpg"]:not(#imp) {
     padding: 20px;
     position: relative; 
     color: #16423C;
-    background-color: #E9EFEC;
+    background-color: #E9EFEC;    
 }
 
 #section2 {
@@ -49,29 +49,9 @@ img[src$=".png"]:not(#imp), img[src$=".jpg"]:not(#imp) {
 }
 
 #section3 span {
-    position: absolute; 
-    top: 0;
-    right: 0; 
-    padding: 10px; 
-    text-align: center;
-    border: 2px solid #16423C;
-    border-radius: 20% ;
-}
-
-#section3 a:link {
-    color: #16423C;
-}
-  
-#section3 a:visited {
-    color: red;
-}
-
-#section3  a:hover {
-    color: #00bf8f;
-}
-  
-#section3 a:active {
-    color: #0000FF;
+    padding: 0;
+    text-align: inherit;
+    border-radius: 0;
 }
 
 #nav {
@@ -193,6 +173,18 @@ img[src$=".png"]:not(#imp), img[src$=".jpg"]:not(#imp) {
 
 #box a:hover {
     color: #ccc;
+}
+
+#box a:visited {
+    color: red;
+}
+
+#box a:hover {
+    color: #00bf8f;
+}
+  
+#box a:active {
+    color: #0000FF;
 }
 
 #container2 {

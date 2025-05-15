@@ -12,6 +12,12 @@ li {
     background-color: lightblue;
 }
 
+h1, h2, .secondtext-item {
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
 .mario {
     position: relative;
     background: url('../images/mario.jpg') no-repeat -30px -48px;
@@ -64,4 +70,21 @@ ul li:last-child{
     color: red;
     font-size:larger;
     border: 2px dotted black;
+}
+
+#box .three {
+    background-color: #6A9C89;
+}
+
+.arrowbc {
+    position:absolute;
+    width: 131.5px;
+    top: 250px;
+    left: 1245px;
+    padding: 20px;
+    background-color: #6A9C89;
+    z-index: 2;
+    box-shadow: 0 0 5px 5px #6A9C89;
+    color:#6A9C89;
+    text-align: center;
 }

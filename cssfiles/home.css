@@ -150,3 +150,20 @@ p, li{
 .nav-button:hover, .submit-button:hover {
     background-color: #6A9C89;
 }
+
+.arrowbc {
+    position:absolute;
+    width: 131.5px;
+    top: 250px;
+    left: 686px;
+    padding: 20px;
+    background-color: #6A9C89;
+    z-index: 2;
+    box-shadow: 0 0 5px 5px #6A9C89;
+    color:#6A9C89;
+    text-align: center;
+}
+
+#box .one {
+    background-color: #6A9C89;
+}
