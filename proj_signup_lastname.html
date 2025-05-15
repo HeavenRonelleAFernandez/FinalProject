@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up | Providence Against Poverty</title>
+    <link rel="stylesheet" href="cssfiles/style.css">
+    <script defer src="jsfiles/script.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class="logo">Providence Against Poverty</h1>
+        <p class="tagline">Empowering communities. Ending poverty.</p>
+    </header>
+
+    <main class="form-container">
+        <h2>Sign Up to Support</h2>
+        <form id="signup-form">
+            <label>First Name* <input type="text" id="first-name" required></label>
+            <span class="error" id="errorfname"></span>
+
+            <label>Last Name* <input type="text" id="last-name" required></label>
+            <span class="error" id="errorlname"></span>
+
+            <label>Sex*:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="sex" value="Male"> Male</label>
+                <label><input type="radio" name="sex" value="Female"> Female</label>
+                <label><input type="radio" name="sex" value="Prefer not to say"> Prefer not to say</label>
+            </div>
+            <span class="error" id="error-sex"></span>
+
+            <label>Email Address* <input type="email" id="email" required></label>
+            <span class="error" id="erroremail"></span>
+
+            <label>Password* <input type="password" id="password" required></label>
+            <span class="error" id="errorpassword"></span>
+
+            <label>Contact Number <input type="text" id="contact"></label>
+
+            <label>Why you're supporting our campaign* <textarea id="reason" required></textarea></label>
+            <span class="error" id="errorreason"></span>
+
+            <button type="submit">Join the Movement</button>
+        </form>
+    </main>
+</body>
+</html>
