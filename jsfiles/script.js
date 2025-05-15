@@ -3,10 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const alreadyAccountBtn = document.getElementById("already-account");
     const noValuesMsg = document.getElementById("no-values-msg");
 
-    // Attach click listener for "Already have an account?" button
+    // Add listener for "Already have an account?" button independently
     if (alreadyAccountBtn) {
         alreadyAccountBtn.addEventListener("click", function () {
-            // Check if essential localStorage values exist
             const fname = localStorage.getItem("fname");
             const lname = localStorage.getItem("lname");
             const email = localStorage.getItem("email");
@@ -14,10 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const reason = localStorage.getItem("reason");
 
             if (fname && lname && email && sex && reason) {
-                // Redirect to profile page
                 window.location.href = "proj_profile_lastname.html";
             } else {
-                // Show "No values found" message
                 noValuesMsg.style.display = "block";
             }
         });
@@ -27,9 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
         form.addEventListener("submit", function (e) {
             e.preventDefault();
 
-            // reset error messages
+            // Reset error messages
             document.querySelectorAll(".error").forEach(el => el.textContent = "");
-            noValuesMsg.style.display = "none"; // hide no-values message on submit
 
             let valid = true;
 
@@ -77,22 +73,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 localStorage.setItem("sex", sex.value);
                 localStorage.setItem("reason", reason);
 
-                // redirect to profile page
                 window.location.href = "proj_profile_lastname.html";
             }
         });
     }
 
+    // Load profile page data
     const pfname = document.getElementById("profilefname");
     if (pfname) {
-        // fill in profile info
         document.getElementById("profilefname").textContent = localStorage.getItem("fname");
         document.getElementById("profilelname").textContent = localStorage.getItem("lname");
         document.getElementById("profileemail").textContent = localStorage.getItem("email");
         document.getElementById("profilesex").textContent = localStorage.getItem("sex");
         document.getElementById("profilereason").textContent = localStorage.getItem("reason");
 
-        // show alert and redirect when button is clicked
         const goHomeBtn = document.getElementById("go-home");
         if (goHomeBtn) {
             goHomeBtn.addEventListener("click", function () {
@@ -102,13 +96,10 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
     }
-});
 
-// takes first name of user to add on the website
-document.addEventListener("DOMContentLoaded", function () {
+    // Populate name on homepage
     const userNameSpan = document.getElementById("user-name");
     const fname = localStorage.getItem("fname");
-
     if (userNameSpan && fname) {
         userNameSpan.textContent = fname;
     }
